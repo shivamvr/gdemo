@@ -21,12 +21,12 @@ body{
 }
 .circle{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .circle svg{
     margin-top: 29vh;
-    /* margin-left: .8rem; */
-    /* aspect-ratio: 1; */
     height: 13.2vh;
     width: 13.2vh;
     background: #1766D0;
