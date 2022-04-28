@@ -1,10 +1,4 @@
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-
-const d = new Date();
-document.write( monthNames[d.getMonth()]);
-
+var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 console.log('time:', time)
 
@@ -32,4 +26,4 @@ const hide = ()=>{
     const show = ()=>{
         homePage.style.display= 'flex'
         page.style.display= 'none'
-  }
+ }
