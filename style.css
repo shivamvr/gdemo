@@ -27,6 +27,7 @@ body{
 
 .circle svg{
     margin-top: 29vh;
+    margin-left: .6rem;
     height: 13.2vh;
     width: 13.2vh;
     background: #1766D0;
@@ -34,7 +35,8 @@ body{
     padding: 3.2vh;
 }
 .info{
-    margin-top: 4.6rem;
+    margin-left: .4px;
+    margin-top: 4.8rem;
     text-align: center;
 }
 .rupees{
@@ -44,7 +46,7 @@ body{
 }
 .service{
     margin-top: 1.3rem;
-    font-size: 22px;
+    font-size: 20px;
 }
 .name{
     font-size: 18px;
