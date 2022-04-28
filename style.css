@@ -25,7 +25,7 @@ body{
 
 .circle svg{
     margin-top: 28.5vh;
-    margin-left: 2.5rem;
+    /* margin-left: 2.5rem; */
     height: 10vh;
     aspect-ratio: 1;
     background: #1766D0;
