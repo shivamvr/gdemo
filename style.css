@@ -17,13 +17,14 @@ body{
     left: 0;
     opacity: .5;
     width: 100%;
+    height: 100vh;
 }
 .circle{
     width: 100%;
 }
 
 .circle svg{
-    margin-top: 15vh;
+    margin-top: 28.5vh;
     margin-left: 2.5rem;
     width: 28vw;
     aspect-ratio: 1;
