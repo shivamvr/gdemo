@@ -5,9 +5,44 @@
     box-sizing: border-box;
     font-family: 'Radio Canada', sans-serif;
 }
+
+
+/* ---------------------Home---------------------------- */
+
+ .home-page{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     height: 100vh;
+ }
+
+ .home-page input{
+     width: 80%;
+     margin: 1rem auto;
+     border: 2px solid #333;
+     border-radius: 1.3rem;
+     height: 3rem;
+     font-size: 24px;
+     padding: 2rem;
+     text-align: center;
+     outline: none;
+ }
+ .home-page button{
+    border: none;
+    margin-top: 3rem;
+    background: #1766D0;
+    color: #fff;
+    padding: 9px 60px;
+    border-radius: 1.3rem;
+    font-size: 25px;
+    outline: none;
+ }
+
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
 }
