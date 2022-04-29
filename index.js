@@ -24,7 +24,10 @@ const homePage = document.querySelector(".home-page")
 const dateTime = document.querySelector(".time")
 const page = document.querySelector(".page")
 
+
+
 const pay = ()=>{
+  var audio = new Audio("sound.mp3");
   const rupeIn = document.querySelector(".rupeIn").value
   const merIn = document.querySelector(".merIn").value
   const nameIn = document.querySelector(".nameIn").value
@@ -32,10 +35,13 @@ const pay = ()=>{
   const merchant = document.querySelector(".service")
   const name = document.querySelector(".name")
   dateTime.innerText = newD
-  rupees.innerText = rupeIn
+  rupees.innerText = '₹'+rupeIn+'.00'
   merchant.innerText = merIn
   name.innerText = nameIn
   hide()
+  setTimeout(()=>{
+    audio.play();
+  },300)
 }
 
 const hide = ()=>{

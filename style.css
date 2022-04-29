@@ -34,7 +34,7 @@ button{
  .home-page button{
     border: none;
     margin-top: 3rem;
-    background: #1766D0;
+    background: #1A72E8;
     color: #fff;
     padding: 9px 60px;
     border-radius: .5rem;
@@ -70,7 +70,7 @@ body{
     margin-left: .6rem;
     height: 13.4vh;
     width: 13.4vh;
-    background: #1766D0;
+    background: #1A72E8;
     border-radius: 50%;
     padding: 3.2vh;
 }
@@ -80,7 +80,7 @@ body{
     text-align: center;
 }
 .rupees{
-    color: #222;
+    color: #3C4043;
     font-size: 38px;
     font-weight: 400;
 }
@@ -89,9 +89,9 @@ body{
     font-size: 18px;
 }
 .name{
+    color: #64646A;
     font-size: 16px;
     margin-top: .2rem;
-    color: rgb(59, 59, 59)
 }
 .footer{
     text-align:  center;
@@ -99,12 +99,13 @@ body{
     margin-bottom: 1rem;
 }
 .footer p{
+    color: #3C4043;
     margin-left: 8px;
     font-size: 15px;
 }
 .footer button{
     margin-top: 1.4rem;
-    border: 1px solid #333;
+    border: 1px solid #c0c0c0;
     color:#1766D0;
     padding: 9px 24px;
     border-radius: 1.3rem;
