@@ -36,7 +36,7 @@ const pay = ()=>{
   const name = document.querySelector(".name")
   dateTime.innerText = newD
   rupees.innerText = '₹'+rupeIn+'.00'
-  merchant.innerText = 'Paid to '+merIn+' Merchant'
+  merchant.innerText = 'Paid to '+merIn
   name.innerText = nameIn
   hide()
   setTimeout(()=>{
