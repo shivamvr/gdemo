@@ -10,7 +10,7 @@ const pay = () => {
   vid.play();
   setTimeout(() => {
     videobox.style.display = 'none'
-  }, 1000)
+  }, 2000)
   var audio = new Audio("sound.mp3");
   const rupeIn = document.querySelector(".rupeIn").value
   const merIn = document.querySelector(".merIn").value
@@ -25,14 +25,14 @@ const pay = () => {
   hide()
   setTimeout(() => {
     audio.play();
-  },1000)
+  },2000)
 }
 
 const hide = () => {
   homePage.style.display = 'none'
   setTimeout(()=>{
     page.style.display = 'block'
-  },1000)
+  },2000)
 }
 
 const show = () => {

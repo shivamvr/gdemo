@@ -73,7 +73,9 @@ body{
     background: #1A72E8;
     border-radius: 50%;
     padding: 3.2vh;
+    vertical-align: top;
 }
+
 .info{
     margin-left: 4px;
     margin-top: 5.1rem;
