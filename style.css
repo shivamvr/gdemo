@@ -114,7 +114,7 @@ body{
     outline: none;
 }
 .videobox{
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     top: 0;
     max-width: 400px;
@@ -129,4 +129,5 @@ body{
     width: 100%;
     transform: scale(1.1);
     transform: translateX(4px);
+    transform: translateY(1rem);
 }

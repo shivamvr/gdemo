@@ -9,7 +9,7 @@ const pay = () => {
   videobox.style.display = 'flex'
   vid.play();
   setTimeout(() => {
-    // videobox.style.display = 'none'
+    videobox.style.display = 'none'
   }, 1000)
   var audio = new Audio("sound.mp3");
   const rupeIn = document.querySelector(".rupeIn").value
