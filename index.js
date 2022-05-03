@@ -25,17 +25,19 @@ const pay = () => {
   hide()
   setTimeout(() => {
     audio.play();
-  }, 300)
+  },1000)
 }
 
 const hide = () => {
   homePage.style.display = 'none'
-  page.style.display = 'block'
+  setTimeout(()=>{
+    page.style.display = 'block'
+  },1000)
 }
 
 const show = () => {
-  homePage.style.display = 'flex'
-  page.style.display = 'none'
+    homePage.style.display = 'flex'
+    page.style.display = 'none'
 }
 
 

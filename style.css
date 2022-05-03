@@ -119,15 +119,14 @@ body{
     top: 0;
     max-width: 400px;
     margin: 0 auto;
-    left: center;
     display: flex;
     justify-content: center;
-    display: none;
     align-self: center;
+    display: none;
 }
 .gvideo{
+    height: 100vh;
     width: 100%;
-    transform: scale(1.1);
-    transform: translateX(4px);
-    transform: translateY(1rem);
+    opacity: .5;
+    transform: translate(2px,-86px);
 }
