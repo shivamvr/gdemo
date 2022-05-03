@@ -118,7 +118,7 @@ body{
     overflow: hidden;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -128,5 +128,5 @@ body{
 .gvideo{
     height: 100vh;
     width: 100%;
-    transform: translate(5px,-86px);
+    transform: translate(5px,-92px);
 }
