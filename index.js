@@ -40,8 +40,6 @@ const show = () => {
     page.style.display = 'none'
 }
 
-
-
 function setTime() {
   var d = new Date();
   // ------------Date-------------
@@ -52,8 +50,6 @@ function setTime() {
   const month = monthNames[d.getMonth()]
   const year = d.getFullYear()
   const dateTime = document.querySelector(".time")
-  console.log(day)
-
   // ------------Time-------------
   var hours = d.getHours()
   var minutes = d.getMinutes()
