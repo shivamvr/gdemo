@@ -41,8 +41,20 @@ const show = () => {
 }
 
 
+
 function setTime() {
   var d = new Date();
+  // ------------Date-------------
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const day = d.getDate()
+  const month = monthNames[d.getMonth()]
+  const year = d.getFullYear()
+  const dateTime = document.querySelector(".time")
+  console.log(day)
+
+  // ------------Time-------------
   var hours = d.getHours()
   var minutes = d.getMinutes()
   var ampm = hours >= 12 ? 'PM' : 'AM';
@@ -50,15 +62,8 @@ function setTime() {
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0' + minutes : minutes;
   var time = hours + ':' + minutes + ' ' + ampm;
-
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const dateTime = document.querySelector(".time")
-  const month = monthNames[d.getMonth()]
-  const year = d.getFullYear()
-  const day = d.getDay()
+  
+  // ------------Combine date and time-------------
   const newD = `${month} ${day}, ${year} ${time}`
   dateTime.innerText = newD
 }
