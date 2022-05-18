@@ -5,6 +5,8 @@ const page = document.querySelector(".page")
 
 const pay = () => {
   var vid = document.querySelector(".gvideo");
+  vid.defaultPlaybackRate = 0.1
+  vid.playbackRate = .6
   var videobox = document.querySelector(".videobox");
   videobox.style.display = 'flex'
   vid.play();
@@ -32,6 +34,7 @@ const hide = () => {
   homePage.style.display = 'none'
   setTimeout(()=>{
     page.style.display = 'block'
+    page.style.opacity = '1'
   },2000)
 }
 

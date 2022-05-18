@@ -1,134 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Radio+Canada:wght@300;400;500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Radio Canada', sans-serif;
-}
-button{
-    cursor: pointer;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Radio+Canada:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Radio Canada", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
 
 /* ---------------------Home---------------------------- */
 
- .home-page{
-     margin-top: 4rem;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     height: 100vh;
- }
-
- .home-page input{
-     width: 90%;
-     margin: 1rem auto;
-     border: 1.5px solid rgb(92, 92, 92);
-     border-radius: .5rem;
-     height: 3rem;
-     font-size: 30px;
-     padding: 2rem;
-     text-align: center;
-     outline: none;
- }
- .home-page button{
-    border: none;
-    margin-top: 3rem;
-    background: #1A72E8;
-    color: #fff;
-    padding: 9px 60px;
-    border-radius: .5rem;
-    font-size: 25px;
-    outline: none;
- }
-
-body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
-.page{
-    display: none;
-}
-.gpay-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .5;
-    width: 100%;
-}
-.circle{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.home-page {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
-.circle svg{
-    margin-top: 29vh;
-    margin-left: .6rem;
-    height: 13.4vh;
-    width: 13.4vh;
-    background: #1A72E8;
-    border-radius: 50%;
-    padding: 3.2vh;
-    vertical-align: top;
+.home-page input {
+  width: 90%;
+  margin: 1rem auto;
+  border: 1.5px solid rgb(92, 92, 92);
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 30px;
+  padding: 2rem;
+  text-align: center;
+  outline: none;
 }
 
-.info{
-    margin-left: 4px;
-    margin-top: 5.1rem;
-    text-align: center;
+.home-page button {
+  border: none;
+  margin-top: 3rem;
+  background: #1a72e8;
+  color: #fff;
+  padding: 9px 60px;
+  border-radius: 0.5rem;
+  font-size: 25px;
+  outline: none;
 }
-.rupees{
-    color: #3C4043;
-    font-size: 38px;
-    font-weight: 400;
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
-.service{
-    margin-top: 1.1rem;
-    font-size: 18px;
+
+.page {
+  display: none;
 }
-.name{
-    color: #64646A;
-    font-size: 16px;
-    margin-top: .2rem;
+
+
+.circle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-name: opa;
+  animation-duration: .5s;
 }
-.footer{
-    text-align:  center;
-    margin-top: 9rem;
-    margin-bottom: 1rem;
+
+
+@keyframes opa {
+    0% {opacity: 0; }
+    25% {opacity: 0.35;}
+    50% {opacity: 0.65;}
+    100% {opacity: 1;}
+    }
+
+.circle svg {
+  margin-top: 29vh;
+  margin-left: 0.6rem;
+  height: 13.4vh;
+  width: 13.4vh;
+  background: #1a72e8;
+  border-radius: 50%;
+  padding: 3.2vh;
+  vertical-align: top;
 }
-.footer p{
-    color: #3C4043;
-    margin-left: 8px;
-    font-size: 15px;
+
+.info {
+  margin-left: 4px;
+  margin-top: 5.1rem;
+  text-align: center;
 }
-.footer button{
-    margin-top: 1.4rem;
-    border: 1px solid #c0c0c0;
-    color:#1766D0;
-    padding: 9px 24px;
-    border-radius: 1.3rem;
-    background: none;
-    font-size: 14px;
-    outline: none;
+
+.rupees {
+  color: #3c4043;
+  font-size: 38px;
+  font-weight: 400;
 }
-.videobox{
-    min-height: 1200px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    display: none;
+
+.service {
+  margin-top: 1.1rem;
+  font-size: 18px;
 }
-.gvideo{
-    opacity: .9;
-    height: 100vh;
-    width: 100%;
-    transform: translate(5px,-100px);
+
+.name {
+  color: #64646a;
+  font-size: 16px;
+  margin-top: 0.2rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 9rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  color: #3c4043;
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.footer button {
+  margin-top: 1.4rem;
+  border: 1px solid #c0c0c0;
+  color: #1766d0;
+  padding: 9px 24px;
+  border-radius: 1.3rem;
+  background: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.videobox {
+  min-height: 1200px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  display: none;
+}
+
+.gvideo {
+    animation-name: opa;
+    animation-duration: .4s;
+  height: 100vh;
+  width: 100%;
+  /* opacity: .5; */
+  transform: translate(5px, -80px);
 }
