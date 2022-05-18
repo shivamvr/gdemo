@@ -2,7 +2,6 @@
 const homePage = document.querySelector(".home-page")
 const page = document.querySelector(".page")
 
-
 const pay = () => {
   var vid = document.querySelector(".gvideo");
   vid.defaultPlaybackRate = 0.1
