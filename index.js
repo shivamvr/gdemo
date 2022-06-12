@@ -1,6 +1,15 @@
 
-const homePage = document.querySelector(".home-page")
+const homePg = document.querySelector(".home-page")
 const page = document.querySelector(".page")
+let ldata = JSON.parse(localStorage.getItem('data'))
+console.log('ldata:', ldata)
+let merIn = document.querySelector(".merIn")
+let nameIn = document.querySelector(".nameIn")
+
+if (ldata) {
+  merIn.value = ldata.merch
+  nameIn.value = ldata.name
+}
 
 const pay = () => {
   var vid = document.querySelector(".gvideo");
@@ -26,20 +35,20 @@ const pay = () => {
   hide()
   setTimeout(() => {
     audio.play();
-  },2000)
+  }, 2000)
 }
 
 const hide = () => {
-  homePage.style.display = 'none'
-  setTimeout(()=>{
+  homePg.style.display = 'none'
+  setTimeout(() => {
     page.style.display = 'block'
     page.style.opacity = '1'
-  },2000)
+  }, 2000)
 }
 
 const show = () => {
-    homePage.style.display = 'flex'
-    page.style.display = 'none'
+  homePg.style.display = 'flex'
+  page.style.display = 'none'
 }
 
 function setTime() {
@@ -60,8 +69,12 @@ function setTime() {
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0' + minutes : minutes;
   var time = hours + ':' + minutes + ' ' + ampm;
-  
+
   // ------------Combine date and time-------------
   const newD = `${month} ${day}, ${year} ${time}`
   dateTime.innerText = newD
+}
+
+function gotoQr(){
+  window.location.href = '/qr.html'
 }

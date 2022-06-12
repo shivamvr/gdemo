@@ -24,10 +24,11 @@ button {
 .home-page input {
   width: 90%;
   margin: 1rem auto;
-  border: 1.5px solid rgb(92, 92, 92);
-  border-radius: 0.5rem;
-  height: 3rem;
-  font-size: 30px;
+  border: 1.5px solid rgb(128, 128, 128);
+  border-radius: 2rem;
+  height: 2.5rem;
+  font-size: 22px;
+  color: rgb(79, 79, 79);
   padding: 2rem;
   text-align: center;
   outline: none;
@@ -35,11 +36,15 @@ button {
 
 .home-page button {
   border: none;
-  margin-top: 3rem;
-  background: #1a72e8;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background: #2a81f4;
   color: #fff;
-  padding: 9px 60px;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
+  padding: 10px 15px;
   font-size: 25px;
   outline: none;
 }
