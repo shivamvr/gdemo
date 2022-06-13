@@ -42,10 +42,10 @@ button {
 }
 
 #close{
-  width: 38px;
+  width: 60px;
   position: absolute;
   top: 32vh;
-  left: 20px;
+  left: 25px;
   z-index: 5;
 }
 
@@ -103,20 +103,21 @@ button {
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.9);
   display: flex;
-  width: fit-content;
+  width: 50%;
+  height: 5rem;
   align-items: center;
   justify-content: center;
-  border-radius: 2rem;
-  padding: 20px 55px;
+  border-radius: 3rem;
+  padding: 10px;
   z-index: 2;
-  font-size: 20px;
+  font-size: 28px;
   cursor: pointer;
   color: #333;
   min-width: fit-content;
 }
 #gallery > img {
-  width: 23px;
-  margin: 0 6px;
+  width: 30px;
+  margin: 0 10px;
   aspect-ratio: 1 / 1;
 }
 #qr-shaded-region {
