@@ -13,13 +13,14 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background: rgba(0, 0, 0, 0.7);
   overflow-y: hidden !important;
+  transform: translateY(-20vh);
 }
 #overlay{
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -94,11 +95,10 @@ button {
   border: solid 2000px rgba(0, 0, 0, 0.314);
 }
 
-
 #gallery {
   word-break: break-all;
   position: absolute;
-  top: 70vh;
+  top: 80vh;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.9);
