@@ -2,13 +2,15 @@
 const homePg = document.querySelector(".home-page")
 const page = document.querySelector(".page")
 let ldata = JSON.parse(localStorage.getItem('data'))
-console.log('ldata:', ldata)
 let merIn = document.querySelector(".merIn")
 let nameIn = document.querySelector(".nameIn")
+
 
 if (ldata) {
   merIn.value = ldata.merch
   nameIn.value = ldata.name
+} else {
+  ldata = { merch: '', name: '' }
 }
 
 const pay = () => {
@@ -36,6 +38,7 @@ const pay = () => {
   setTimeout(() => {
     audio.play();
   }, 2000)
+  saveIt()
 }
 
 const hide = () => {
@@ -75,6 +78,14 @@ function setTime() {
   dateTime.innerText = newD
 }
 
-function gotoQr(){
+function gotoQr() {
   window.location.href = '/qr.html'
+}
+
+function saveIt() {
+  let merIn = document.querySelector(".merIn").value
+  let nameIn = document.querySelector(".nameIn").value
+  ldata.merch = merIn
+  ldata.name = nameIn
+  localStorage.setItem('data',JSON.stringify(ldata))
 }

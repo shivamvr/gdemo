@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="qr.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Qrcode Scaner</title>
-</head>
-<body>
-    <div class="options">
-        <img id="close" src="icon/close.svg" alt="">
-        <div>
-            <img id="flash" src="icon/flashligh.svg" alt="">
-            <img src="icon/qr_code.svg" alt="">
-            <img src="icon/options.svg" alt="">
-        </div>
-    </div>
-    <video id="qrbox"> </video>
-    <div class="overlay">
-        <div class="border"><img src="icon/border.png" alt=""></div>
-        <div id="clip"></div>
-        <div id="gallery"><img src="icon/image.svg" alt="">Upload from gallery</div>
-    </div>
-
-    <script src="main.js"></script>
-</body>
+<html>
+  <head>
+    <title>Html-Qrcode Demo</title>
+    <link rel="stylesheet" href="qr.css" />
+    <script src="qrcode.js"></script>
+  </head>
+    <body>
+      <div id="close"><img src="icon/close.svg" alt=""></div>
+      <div id="qr-reader"></div>
+      <div id="gallery"><img src="icon/image.svg" alt="">Upload from gallery</div>
+      <script src="qr.js"></script>
+    </body>
 </html>
+
