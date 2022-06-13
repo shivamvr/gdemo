@@ -43,17 +43,17 @@ function formateQr(str) {
 }
 
 function doScan() {
-    var html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 500 });
+    var qrScaner = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 500 });
     let inputData = {}
     function onScanSuccess(decodedText, decodedResult) {
         let formateData = formateQr('\n' + decodedText)
         inputData.merch = formateData[0]
         inputData.name = formateData[1]
         localStorage.setItem('data', JSON.stringify(inputData))
+        qrScaner.clear()
         window.location.href = '/index.html'
     }
     function onScanError(err) {
-        console.log('err:', err)
     }
-    html5QrcodeScanner.render(onScanSuccess, onScanError);
+    qrScaner.render(onScanSuccess, onScanError);
 }
