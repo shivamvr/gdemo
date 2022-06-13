@@ -57,3 +57,12 @@ function doScan() {
     }
     qrScaner.render(onScanSuccess, onScanError);
 }
+
+window.onload = ()=>{
+    let camaccess = get('#qr-reader__camera_permission_button')
+    
+    if(camaccess){
+        camaccess.click()
+    }
+}
+

@@ -232,3 +232,7 @@ span:nth-child(2) > button:nth-child(1) {
  {
   opacity: 0 !important;
 }
+
+#qr-reader__camera_permission_button{
+  visibility: hidden;
+}
