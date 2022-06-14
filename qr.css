@@ -43,8 +43,9 @@ button {
 #close {
   width: 30px;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 22vh;
+  background-color: red;
+  left: 10px;
   z-index: 5;
 }
 

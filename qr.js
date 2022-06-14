@@ -1,4 +1,3 @@
-let close = document.getElementById("close");
 
 function docReady(fn) {
     if (
@@ -37,10 +36,6 @@ function toggleScan() {
     select.value = cam2.value
 }
 
-function goHome() {
-    window.location.href = "/index.html";
-}
-
 function formateQr(str) {
     let str1 = str.split("pn=")[1].split("&")[0].replaceAll("%20", " ");
     let str2 = str.split("pa=")[1].split("&")[0].replaceAll("%20", " ");
@@ -51,12 +46,14 @@ function doScan() {
     var qrScaner = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 500 });
     let inputData = {};
     function onScanSuccess(decodedText, decodedResult) {
+        let close = document.getElementById("close");
         let formateData = formateQr("\n" + decodedText);
         inputData.merch = formateData[0];
         inputData.name = formateData[1];
         localStorage.setItem("data", JSON.stringify(inputData));
         qrScaner.clear();
-        window.location.href = "/index.html";
+        close.click()
+        // window.location.href = "/index.html";
     }
     function onScanError(err) { }
     qrScaner.render(onScanSuccess, onScanError);
