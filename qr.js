@@ -23,7 +23,10 @@ function toggleScan() {
         start.click();
     }
     let select = document.getElementById('qr-reader__camera_selection')
-    let cam2 = document.querySelectorAll('option')[1]
+    let cams = document.querySelectorAll('option')
+    console.log('cams:', cams)
+    let cam2 = cams[1]
+    alert(select.innerHTML)
     cam2.setAttribute('selected', '')
     select.value = cam2.value
 }
