@@ -46,14 +46,13 @@ function doScan() {
     var qrScaner = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 500 });
     let inputData = {};
     function onScanSuccess(decodedText, decodedResult) {
-        let close = document.getElementById("close");
+        let closeqr = document.querySelector("#close>a");
         let formateData = formateQr("\n" + decodedText);
         inputData.merch = formateData[0];
         inputData.name = formateData[1];
         localStorage.setItem("data", JSON.stringify(inputData));
         qrScaner.clear();
-        close.click()
-        // window.location.href = "/index.html";
+        closeqr.click()
     }
     function onScanError(err) { }
     qrScaner.render(onScanSuccess, onScanError);
