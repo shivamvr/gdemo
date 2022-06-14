@@ -13,9 +13,10 @@
 button {
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
+  width: 100%;
 }
 
 body {
@@ -44,7 +45,7 @@ body {
   border: 1.5px solid rgb(128, 128, 128);
   border-radius: 2rem;
   height: 2.5rem;
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(79, 79, 79);
   padding: 2rem;
   text-align: center;
@@ -62,10 +63,9 @@ body {
   color: #fff;
   border-radius: 2rem;
   padding: 8px 15px;
-  font-size: 23px;
+  font-size: 20px;
   outline: none;
 }
-
 
 .page {
   display: none;
@@ -76,15 +76,23 @@ body {
   display: flex;
   justify-content: center;
   animation-name: opa;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 
 @keyframes opa {
-    0% {opacity: 0; }
-    25% {opacity: 0.35;}
-    50% {opacity: 0.65;}
-    100% {opacity: 1;}
-    }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .circle svg {
   margin-top: 29vh;
@@ -144,7 +152,7 @@ body {
 }
 
 .videobox {
-  min-height: 1200px;
+  min-height: 100vh;
   overflow: hidden;
   position: absolute;
   top: -10px;
@@ -156,10 +164,9 @@ body {
 }
 
 .gvideo {
-    animation-name: opa;
-    animation-duration: .4s;
+  animation-name: opa;
+  animation-duration: 0.4s;
   height: 100vh;
   width: 100%;
-  transform: translate(5px,-102px);
+  transform: translate(5px, -102px);
 }
-
