@@ -55,7 +55,7 @@ body {
 }
 .home-page input:focus{
   border-color: #2a82f4a5;
-  box-shadow: 0px 2px 6px #2a82f46c;
+  box-shadow: 0px 2px 5px #2a82f46c;
 }
 
 .home-page button {
