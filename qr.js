@@ -63,7 +63,7 @@ function doScan() {
 }
 
 window.onload = () => {
-    let camaccess = get("#qr-reader__camera_permission_button");
+    let camaccess = document.querySelector("#qr-reader__camera_permission_button");
 
     if (camaccess) {
         camaccess.click();
