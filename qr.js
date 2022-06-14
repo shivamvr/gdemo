@@ -14,13 +14,15 @@ docReady(doScan);
 let scanBtn = document.getElementById('gallery')
 
 scanBtn.addEventListener('click', toggleScan)
-close.addEventListener('click', goHome)
+// close.addEventListener('click', goHome)
 
 let isScan = true
 
 function toggleScan() {
     let start = document.querySelector('span:nth-child(2)>button:nth-child(1)')
     let stop = document.querySelector('span:nth-child(2)>button:nth-child(2)')
+    console.log('start:', start)
+    console.log('stop:', stop)
     if (isScan) {
         stop.click()
         isScan = false

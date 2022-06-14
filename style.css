@@ -10,6 +10,10 @@
 button {
   cursor: pointer;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 /* ---------------------Home---------------------------- */
 
@@ -152,4 +156,8 @@ body {
   height: 100vh;
   width: 100%;
   transform: translate(5px,-102px);
+}
+
+.home-page,.videobox, .page{
+  /* display: none; */
 }
