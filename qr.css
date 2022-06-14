@@ -16,7 +16,7 @@ body {
   height: 120vh;
   background: rgba(0, 0, 0, 0.7);
   overflow-y: hidden !important;
-  transform: translateY(-20vh);
+  transform: translateY(-15vh);
 }
 #overlay {
   width: 100vw;
@@ -43,9 +43,8 @@ button {
 #close {
   width: 30px;
   position: absolute;
-  top: 22vh;
-  background-color: red;
-  left: 10px;
+  top: 17vh;
+  left: 5px;
   z-index: 5;
 }
 
@@ -99,7 +98,7 @@ button {
 #gallery {
   word-break: break-all;
   position: absolute;
-  top: 88vh;
+  top: 90vh;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.9);
@@ -110,14 +109,14 @@ button {
   border-radius: 3rem;
   padding: 15px 20px;
   z-index: 2;
-  font-size: 16px;
+  font-size: 14px !important;
   cursor: pointer;
   color: #333;
   min-width: fit-content;
 }
 #gallery > img {
-  width: 23px;
-  margin: 0 8px;
+  width: 20px;
+  margin: 0 5px;
   aspect-ratio: 1 / 1;
 }
 #qr-shaded-region {
