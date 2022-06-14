@@ -33,7 +33,8 @@ function toggleScan() {
     let select = document.getElementById('qr-reader__camera_selection')
     console.log('select before change', select)
     let cam2 = document.querySelectorAll('option')[1]
-    cam2.setAttribute('selected')
+    cam2.setAttribute('selected', '')
+    select.value = cam2.value
 }
 
 function goHome() {
@@ -56,7 +57,6 @@ function doScan() {
         localStorage.setItem("data", JSON.stringify(inputData));
         qrScaner.clear();
         window.location.href = "/index.html";
-
     }
     function onScanError(err) { }
     qrScaner.render(onScanSuccess, onScanError);
@@ -64,11 +64,17 @@ function doScan() {
 
 window.onload = () => {
     let camaccess = document.querySelector("#qr-reader__camera_permission_button");
-
     if (camaccess) {
-        camaccess.click();
-    }
+         camaccess.click()
 
-};
+        }
+        setTimeout(()=>{
+            let select = document.getElementById('qr-reader__camera_selection')
+            let cam2 = document.querySelectorAll('option')[1]
+            select.value = cam2.value
+            cam2.setAttribute('selected', '')
+        },1000)
+
+}
 
 
