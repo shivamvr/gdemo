@@ -23,7 +23,7 @@ function toggleScan() {
         start.click();
     }
     let select = document.getElementById('qr-reader__camera_selection')
-    let cam2 = document.querySelectorAll('option')[0]
+    let cam2 = document.querySelectorAll('option')[1]
     cam2.setAttribute('selected', '')
     select.value = cam2.value
 }
@@ -64,7 +64,7 @@ window.onload = () => {
         let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
         let startqr = document.querySelector("span:nth-child(2)>button:nth-child(1)");
         let select = document.getElementById('qr-reader__camera_selection')
-        let cam2 = document.querySelectorAll('option')[0]
+        let cam2 = document.querySelectorAll('option')[1]
         if (select && cam2) {
             select.value = cam2.value
             cam2.setAttribute('selected', '')
