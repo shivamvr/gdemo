@@ -62,6 +62,7 @@ window.onload = () => {
     }
     setTimeout(() => {
         let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
+        let startqr = document.querySelector("span:nth-child(2)>button:nth-child(1)");
         let select = document.getElementById('qr-reader__camera_selection')
         let cam2 = document.querySelectorAll('option')[1]
         if (select && cam2) {
@@ -73,6 +74,12 @@ window.onload = () => {
                 stopqr.click()
                 scanBtn.style.opacity = '1'
             },1000)
+
+            setTimeout(() => {
+                if(startqr){
+                    startqr.click()
+                }
+            },1010)
         }
     }, 1000)
 

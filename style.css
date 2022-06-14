@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Radio Canada", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  /* -webkit-touch-callout: none; */
 }
 ::-webkit-scrollbar {
   display: none;
@@ -51,6 +53,10 @@ body {
   text-align: center;
   outline: none;
 }
+.home-page input:focus{
+  border-color: #2a82f4a5;
+  box-shadow: 0px 2px 6px #2a82f46c;
+}
 
 .home-page button {
   border: none;
@@ -65,6 +71,9 @@ body {
   padding: 10px 15px;
   font-size: 22px;
   outline: none;
+}
+.home-page button:active{
+  transform: scale(.95);
 }
 
 .page {

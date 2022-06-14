@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  /* -webkit-touch-callout: none; */
 }
 
 ::-webkit-scrollbar {
@@ -119,6 +121,9 @@ button {
   width: 20px;
   margin: 0 5px;
   aspect-ratio: 1 / 1;
+}
+#gallery:active{
+  background: rgba(255, 255, 255, 0.8);
 }
 #qr-shaded-region {
   visibility: hidden;
