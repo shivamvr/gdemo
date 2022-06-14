@@ -11,29 +11,26 @@ function docReady(fn) {
 }
 
 docReady(doScan);
-
+let closeBtn = document.getElementById('close')
 let scanBtn = document.getElementById("gallery");
 scanBtn.addEventListener("click", toggleScan);
+closeBtn.addEventListener('click', closeqrr)
 
-let isScan = true;
 
 function toggleScan() {
     let start = document.querySelector("span:nth-child(2)>button:nth-child(1)");
-    let stop = document.querySelector("span:nth-child(2)>button:nth-child(2)");
-    console.log("start:", start);
-    console.log("stop:", stop);
-    if (isScan) {
-        stop.click();
-        isScan = false;
-    } else {
+    if (start) {
         start.click();
-        isScan = true;
     }
     let select = document.getElementById('qr-reader__camera_selection')
-    console.log('select before change', select)
     let cam2 = document.querySelectorAll('option')[1]
     cam2.setAttribute('selected', '')
     select.value = cam2.value
+}
+
+function closeqrr() {
+    let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
+    stopqr.click()
 }
 
 function formateQr(str) {
@@ -61,15 +58,22 @@ function doScan() {
 window.onload = () => {
     let camaccess = document.querySelector("#qr-reader__camera_permission_button");
     if (camaccess) {
-         camaccess.click()
-
-        }
-        setTimeout(()=>{
-            let select = document.getElementById('qr-reader__camera_selection')
-            let cam2 = document.querySelectorAll('option')[1]
+        camaccess.click()
+    }
+    setTimeout(() => {
+        let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
+        let select = document.getElementById('qr-reader__camera_selection')
+        let cam2 = document.querySelectorAll('option')[1]
+        if (select && cam2) {
             select.value = cam2.value
             cam2.setAttribute('selected', '')
-        },1000)
+        }
+        if (stopqr) {
+            setTimeout(() => {
+                stopqr.click()
+            }, 500)
+        }
+    }, 1000)
 
 }
 
