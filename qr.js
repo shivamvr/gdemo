@@ -71,7 +71,8 @@ window.onload = () => {
         if (stopqr) {
             setTimeout(() => {
                 stopqr.click()
-            }, 500)
+                scanBtn.style.opacity = '1'
+            },1000)
         }
     }, 1000)
 
