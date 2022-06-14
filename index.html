@@ -7,14 +7,26 @@
     <title>google pay</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="google.ico" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="qr.css" /> -->
+    <!-- <script src="qrcode.js"></script> -->
   </head>
   <body>
+    <!-- <div id="qrscanbox">
+      <div id="close"><img src="icon/close.svg" alt=""></div>
+      <div id="qr-reader"></div>
+      <div id="overlay">
+        <div id="border"> <img id="roundB" src="icon/transparent.png" alt=""> <img id="bimg" src="icon/border.png" alt=""></div>
+      </div>
+      <div id="gallery"><img src="icon/image.svg" alt="">Upload from gallery</div>
+      <script src="qr.js"></script>
+    </div> -->
+
     <div class="home-page">
       <input class="rupeIn" type="number" placeholder="Amount" />
       <input class="merIn" type="text" placeholder="Merchant" />
       <input class="nameIn" type="text" placeholder="Name" />
       <button onclick="pay()">Pay</button>
-      <button onclick="gotoQr()">scan</button>
+      <button ><a href="qr.html">scan</a></button>
     </div>
     <div class="videobox">
       <video
