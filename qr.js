@@ -33,10 +33,7 @@ function toggleScan() {
     let select = document.getElementById('qr-reader__camera_selection')
     console.log('select before change', select)
     let cam2 = document.querySelectorAll('option')[1]
-    cam2.setAttribute('selected','')
-    console.log('cam2:', cam2)
-    select.value = cam2.value
-    console.log('select changed', select)
+    cam2.setAttribute('selected')
 }
 
 function goHome() {
