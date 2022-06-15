@@ -24,9 +24,16 @@ function toggleScan() {
     }
     let select = document.getElementById('qr-reader__camera_selection')
     let cams = document.querySelectorAll('option')
-    console.log('cams:', cams)
     let cam2 = cams[0]
-    alert(select.innerHTML)
+
+    console.log('cams:', cams.length)
+
+    if (cams.length === 3) {
+        cam2 = cams[2]
+    } else {
+        cam2 = cams[0]
+    }
+
     cam2.setAttribute('selected', '')
     select.value = cam2.value
 }
@@ -63,11 +70,18 @@ window.onload = () => {
     if (camaccess) {
         camaccess.click()
     }
+    setTimeout(() => { scanBtn.style.opacity = '1' }, 2000)
     setTimeout(() => {
         let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
         let startqr = document.querySelector("span:nth-child(2)>button:nth-child(1)");
         let select = document.getElementById('qr-reader__camera_selection')
-        let cam2 = document.querySelectorAll('option')[0]
+        let cams = document.querySelectorAll('option')
+        let cam2 = cams[1]
+        if (cams.length === 3) {
+            cam2 = cams[2]
+        } else {
+            cam2 = cams[1]
+        }
         if (select && cam2) {
             select.value = cam2.value
             cam2.setAttribute('selected', '')
@@ -75,14 +89,13 @@ window.onload = () => {
         if (stopqr) {
             setTimeout(() => {
                 stopqr.click()
-                scanBtn.style.opacity = '1'
-            },1000)
+            }, 1000)
 
             setTimeout(() => {
-                if(startqr){
+                if (startqr) {
                     startqr.click()
                 }
-            },1010)
+            }, 1020)
         }
     }, 1000)
 
