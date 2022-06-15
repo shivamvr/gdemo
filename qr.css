@@ -109,7 +109,7 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 3rem;
-  padding: 12px 18px;
+  padding: 10px 15px;
   z-index: 2;
   font-size: 13px !important;
   cursor: pointer;
@@ -179,7 +179,7 @@ span:nth-child(2) > button:nth-child(1) {
 }
 .footer-item{
   color: #fff;
-  font-size: 18px;
+  font-size: 17px;
   height: 44%;
   display: flex;
   align-items: center;
