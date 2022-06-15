@@ -26,7 +26,6 @@ function toggleScan() {
     let cams = document.querySelectorAll('option')
     let cam2 = cams[0]
 
-    console.log('cams:', cams.length)
 
     if (cams.length === 3) {
         cam2 = cams[2]
