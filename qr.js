@@ -19,22 +19,25 @@ closeBtn.addEventListener('click', closeqrr)
 
 function toggleScan() {
     let start = document.querySelector("span:nth-child(2)>button:nth-child(1)");
-    if (start) {
-        start.click();
-    }
+    let stopqr = document.querySelector("span:nth-child(2)>button:nth-child(2)");
+    stopqr.click();
+
     let select = document.getElementById('qr-reader__camera_selection')
     let cams = document.querySelectorAll('option')
-    let cam2 = cams[0]
-
+    let cam2 = cams[1]
 
     if (cams.length === 3) {
         cam2 = cams[2]
     } else {
-        cam2 = cams[0]
+        cam2 = cams[1]
     }
 
     cam2.setAttribute('selected', '')
     select.value = cam2.value
+
+    if (start) {
+        start.click()
+    }
 }
 
 function closeqrr() {
