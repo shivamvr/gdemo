@@ -33,7 +33,7 @@ body {
 /* ---------------------Home---------------------------- */
 
 .home-page {
-  margin-top: 4rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@ body {
 
 .home-page input {
   width: 90%;
-  margin: 1rem auto;
+  margin: .7rem auto;
   border: 1.5px solid rgb(128, 128, 128);
   border-radius: 2rem;
   height: 2.5rem;
@@ -64,7 +64,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: .7rem;
   background: #2a81f4;
   color: #fff;
   border-radius: 2rem;

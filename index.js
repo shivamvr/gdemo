@@ -1,9 +1,9 @@
-
 const homePg = document.querySelector(".home-page")
 const page = document.querySelector(".page")
 let ldata = JSON.parse(localStorage.getItem('data'))
 let merIn = document.querySelector(".merIn")
 let nameIn = document.querySelector(".nameIn")
+let qrinput = document.getElementById('qrinput')
 
 
 if (ldata) {
@@ -78,14 +78,72 @@ function setTime() {
   dateTime.innerText = newD
 }
 
-function gotoQr() {
-  window.location.href = '/qr.html'
-}
+
+qrinput.addEventListener('input', submitqr)
+qrinput.addEventListener('change', submitqr)
+qrinput.addEventListener('click', pasteData)
 
 function saveIt() {
   let merIn = document.querySelector(".merIn").value
   let nameIn = document.querySelector(".nameIn").value
   ldata.merch = merIn
   ldata.name = nameIn
-  localStorage.setItem('data',JSON.stringify(ldata))
+  localStorage.setItem('data', JSON.stringify(ldata))
 }
+
+function submitqr() {
+  let qrinput = document.getElementById('qrinput').value
+  console.log('qrinput:', qrinput)
+  if (formateQr(qrinput)) {
+    let merch = formateQr(qrinput)[0]
+    let name = formateQr(qrinput)[1]
+    merIn.value = merch
+    nameIn.value = name
+  }
+
+}
+
+async function pasteData() {
+  let nameIn = document.querySelector(".nameIn")
+  let merIn = document.querySelector(".merIn")
+  let qrinput = document.getElementById('qrinput')
+  const clipBoardText = await navigator.clipboard.readText();
+  let isCopiedTextUrl = isQrUrl(clipBoardText)
+  if (isCopiedTextUrl && qrinput.value === '') {
+    qrinput.value = clipBoardText
+    let merch = formateQr(clipBoardText)[0]
+    let name = formateQr(clipBoardText)[1]
+    merIn.value = merch
+    nameIn.value = name
+    qrinput.select();
+    qrinput.setSelectionRange(0, 99999)
+  }
+
+}
+
+function formateQr(str) {
+  let isUrl = isQrUrl(str)
+  if (!isUrl) {
+    return false
+  }
+  let str1 = str.split("pn=")[1].split("&")[0].replaceAll("%20", " ");
+  let str2 = str.split("pa=")[1].split("&")[0].replaceAll("%20", " ");
+  return [str1, str2];
+
+}
+
+function isQrUrl(str) {
+  let result = str.includes("upi://pay?");
+  if (result) {
+    result = str.includes("pa=");
+  } if (result) {
+    result = str.includes("pn=");
+  }
+  if (!result) {
+    return false
+  }
+  return true
+}
+
+
+pasteData()
