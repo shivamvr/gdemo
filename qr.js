@@ -59,7 +59,9 @@ function doScan() {
         let formateData = formateQr("\n" + decodedText);
         inputData.merch = formateData[0];
         inputData.name = formateData[1];
+        inputData.scandata = decodedText
         localStorage.setItem("data", JSON.stringify(inputData));
+        console.log('decodedText:', decodedText)
         qrScaner.clear();
         closeqr.click()
     }

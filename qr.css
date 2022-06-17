@@ -58,9 +58,10 @@ button {
 }
 
 #qr-reader {
-  padding: 0;
+  box-sizing: border-box;
+  padding: 5px;
   margin: 0 auto;
-  width: 100vw;
+  width: 98%;
   border: none !important;
   position: absolute;
   top: 50%;

@@ -5,7 +5,6 @@ let merIn = document.querySelector(".merIn")
 let nameIn = document.querySelector(".nameIn")
 let qrinput = document.getElementById('qrinput')
 
-
 if (ldata) {
   merIn.value = ldata.merch
   nameIn.value = ldata.name
@@ -147,3 +146,12 @@ function isQrUrl(str) {
 
 
 pasteData()
+
+
+console.log('ldata.scandata:', ldata.scandata)
+
+if(ldata.scandata != '' && ldata.scandata){
+  qrinput.value = ldata.scandata
+  ldata.scandata = ''
+  localStorage.setItem('data', JSON.stringify(ldata))
+}
